@@ -61,7 +61,7 @@ router.get("/items/rated", function(req, res, next) {
         var result = {};
         result.name = items[ratings[i]._id].name;
         result.img = items[ratings[i]._id].img;
-        result.stars = ratings[i].stars;
+        result.stars = ratings[i].stars + 100;
         result.votes = ratings[i].votes;
         result.average = ratings[i].stars / ratings[i].votes;
         result.halfstar = Math.round((ratings[i].stars / ratings[i].votes)*2)/2;
